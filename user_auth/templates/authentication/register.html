@@ -1,0 +1,32 @@
+{% extends "header_user.html" %}
+
+
+
+            {% block content %}
+            
+            
+            <div class="d-flex justify-content-center">
+            
+                <form method="POST" class="form-group">
+                    <h1>Register a new user</h1>
+                    <br><br>
+                    {% csrf_token %}
+                    <label>Username</label>
+                    <input type="text" name="username" placeholder="insert username" required>
+                    <br/><br/>
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="example@example.com" required>
+                    <br/><br/>
+                    <label>Password</label>
+                    <input type="password" name="password1" placeholder="at least 8 characters" required>
+                    <br/><br/>
+                    <label>Confirm Password</label>
+                    <input type="password" name="password2" required>
+                    <br/><br/>
+                <button type="submit" class="btn btn-outline-warning">Register</button>
+                </form>
+            
+            
+            </div>
+            
+            {% endblock %}

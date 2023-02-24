@@ -1,0 +1,32 @@
+{% extends "header_poll.html" %}
+
+<div class="container">
+
+{% block content %}
+
+<h1>Thanks for voting!</h1>
+
+<h2> {{ question.question_text }} </h2>
+
+<ul>
+    {% for choice in question.choice_set.all %}
+    <li>
+        {{ choice.choice_text }} -- {{ choice.votes}}
+        vote{{choice.votes|pluralize}}
+    </li>
+    {% endfor %}
+</ul>
+<ul>
+
+<b>
+<a href="{% url 'vote:detail' question.id %}">
+    Vote again?<br><br>
+</a>
+</b>
+
+</ul>
+<hr>
+
+{% endblock %}
+
+</div>

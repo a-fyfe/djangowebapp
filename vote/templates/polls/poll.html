@@ -1,0 +1,29 @@
+{% extends "header_poll.html" %}
+
+<div id="container">
+    
+{% block content %}
+
+<h1>Vote for the next Risking Nostalgia show now:</h1>
+<p>All results will be passed on to the band so that they can plan their next tour.<br><br>Don't miss 'em!
+</p>
+<h2>Latest polls:</h2>
+<br>
+
+{% if latest_question_list %}
+<ul>
+    {% for question in latest_question_list %}
+    <li>
+        <a href = "{% url 'vote:detail' question.id %}">
+            {{ question.question_text }}
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No polls are available.</p>
+{% endif %}
+
+{% endblock %}
+
+</div>

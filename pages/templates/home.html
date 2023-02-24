@@ -1,0 +1,88 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"/>
+      <link href="{% static 'style.css' %}" rel="stylesheet" type="text/css"/>
+      <link rel="shortcut icon" type="image/ico" href="{% static 'favicon.ico' %}"/>
+      <title>Risking Nostalgia UK</title>
+   </head>
+   <body>
+      <div class="row">
+         <div class="col-md-10">
+            <h1>Risking Nostalgia UK</h1>
+            <h3>The online home of RN's UK fan club</h3>
+         </div>
+         <div class="col-md-2">
+            <img src="{% static 'images/band_logo.jpg' %}" class="rounded-circle" alt="RN logo" width="100" height="100">
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-12" align="left">
+            <br>
+            <a href="http://127.0.0.1:8000/" class="btn btn-outline-warning" role="button">Home</a>
+            <a href="http://127.0.0.1:8000/media/" class="btn btn-outline-warning" role="button">Media</a>
+            <a href="http://127.0.0.1:8000/vote/" class="btn btn-outline-warning" role="button">Vote for their next show</a>
+            <a href="http://127.0.0.1:8000/user_auth/" class="btn btn-outline-warning" role="button">Login</a>
+            <br>
+            <hr>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-12">
+            <h2>About the band</h2>
+            <h3>
+               "British four-piece, Risking Nostalgia, emerged from London in the summer of 2016."
+            </h3>
+            <p>
+               Lead by Jake Tempest (vocals, guitar); Ollie Rann (guitar), Liam Matthews (bass) and Charlie Kenny (drums) complete this new chapter in alternative rock. Collecting blues-esque styled rock rhythms under a chorus of soaring lead guitar, the band is described as combining old with the new to bring about a fresh sound inspired by innovators such as Queens of the Stone Age and The Cure.<br><br>
+               Son the Desert, the band's first single, has showcased on eagle3 radio along with London Sadness following their self titled EP, released in 2018. Now writing more music, Risking Nostalgia has featured in numerous shows in London and continues to seek out new opportunities to bring their talent to the public.<br><br>
+               Since 2018 they have played shows like the Haslemere Fringe Festival with other well known artists like Scouting for Girls, Lucy Spraggan and The Real Thing.
+            </p>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-6">
+            <h2>Meet the guys</h2>
+            <p>Jake Tempest (vocals, guitar)<br> Ollie Rann (guitar)<br> Liam Matthews (bass)<br>  Charlie Kenny (drums)</p>
+         </div>
+         <div class="col-md-6">
+            <div class="container">
+               <img src="{% static 'images/lineup.jpg' %}" class="rounded mx-auto d-block" alt="" height="200" onclick="window.open('images/lineup.jpg', '_blank');">
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-6">
+            <div class="col-md-6">
+               <div class="container">
+                  <img src="{% static 'images/salem.jpg' %}" class="rounded mx-auto d-block" alt="" width="200" height="200" onclick="window.open('images/salem.jpg', '_blank');">
+               </div>
+            </div>
+         </div>
+         <div class="col-md-6">
+            <div class="container">
+               <h2>Latest release</h2>
+               <p>Salem EP<br>
+                  Tracklist:<br><br>
+                  1. Salem<br>
+                  2. Hate me like you should<br>
+                  3. All at once
+               </p>
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-12">
+            <hr>
+            <h3>Stay in the loop!</h3>
+            <form>
+               <p>Sign up now and get all the latest news - plus vote on where you'd next like to see Risking Nostalgia live<br><br>
+                  <a href="http://127.0.0.1:8000/user_auth/register/" class="btn btn-outline-warning" role="button">Register</a>
+            </form>
+         </div>
+      </div>
+   </body>
+</html>
